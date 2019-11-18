@@ -20,21 +20,21 @@ public class CompareAssortedArrays {
     public void test1() {
         Integer[] array = {1, 2, 3};
         Integer[] arraySquared = {1, 4, 9};
-        test(array, arraySquared);
+        Assert.assertTrue(SquareArrayAnalyzer.compare(array, arraySquared));
     }
 
     @Test
     public void test2() {
         Integer[] array = {3, 4, 5};
         Integer[] arraySquared = {9, 16, 25};
-        test(array, arraySquared);
+        Assert.assertTrue(SquareArrayAnalyzer.compare(array, arraySquared));
     }
 
     @Test
     public void test3() {
         Integer[] array = {121, 144, 19, 161, 19, 144, 19, 11};
         Integer[] arraySquared = {121, 14641, 20736, 361, 25921, 361, 20736, 361};
-        test(array, arraySquared);
+        Assert.assertFalse(SquareArrayAnalyzer.compare(array, arraySquared));
     }
     
     private void test(Integer[] array1, Integer[] array2) {
