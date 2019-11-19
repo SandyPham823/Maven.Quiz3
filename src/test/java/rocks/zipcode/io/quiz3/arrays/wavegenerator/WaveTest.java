@@ -1,12 +1,15 @@
+/*
 package rocks.zipcode.io.quiz3.arrays.wavegenerator;
 
 import org.junit.Test;
 import rocks.zipcode.io.quiz3.utils.TestUtils;
 import rocks.zipcode.io.quiz3.arrays.WaveGenerator;
 
+*/
 /**
  * @author leon on 10/12/2018.
- */
+ *//*
+
 public class WaveTest {
     @Test
     public void test0() {
@@ -210,3 +213,5 @@ public class WaveTest {
         TestUtils.assertArrayEquals(expected, actual);
     }
 }
+*/
+
