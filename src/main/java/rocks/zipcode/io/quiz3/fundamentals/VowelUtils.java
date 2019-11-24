@@ -5,12 +5,13 @@ package rocks.zipcode.io.quiz3.fundamentals;
  */
 public class VowelUtils {
     public static Boolean hasVowels(String word) {
+        String lowerCaseWord = word.toLowerCase();
         for (int i = 0; i < word.length(); i++){
-            if ((word.charAt(i) == 'a') ||
-                    (word.charAt(i) == 'e') ||
-                    (word.charAt(i) == 'i') ||
-                    (word.charAt(i) == 'o') ||
-                    (word.charAt(i) == 'u')){
+            if ((lowerCaseWord.charAt(i) == 'a') ||
+                    (lowerCaseWord.charAt(i) == 'e') ||
+                    (lowerCaseWord.charAt(i) == 'i') ||
+                    (lowerCaseWord.charAt(i) == 'o') ||
+                    (lowerCaseWord.charAt(i) == 'u')){
                 return true;
             }
         }
@@ -28,10 +29,7 @@ public class VowelUtils {
 
 //something wrong with this test idk WHAT
     public static Boolean startsWithVowel(String word) {
-            if (getIndexOfFirstVowel(word) == 0)
-                return true;
-
-            return false;
+        return getIndexOfFirstVowel(word) == 0;
     }
 
     public static Boolean isVowel(Character character) {

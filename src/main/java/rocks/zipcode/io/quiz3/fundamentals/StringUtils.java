@@ -22,17 +22,25 @@ public class StringUtils {
         return false;
     }
 
-    //coming back to this!
     public static String[] getAllSubStrings(String string) {
+        ArrayList<String> arrList = new ArrayList<>();
         for (int i = 0; i < string.length(); i++){
-            for (int j = i + 1; j <= string.length(); j++){
-
+            for (int j = i + 1; j < string.length() + 1; j++){
+                if (!arrList.contains((string.substring(i, j)))) {
+                    arrList.add(string.substring(i, j));
+                }
             }
         }
-        return null;
+        return arrList.toArray(new String[0]);
     }
 
     public static Integer getNumberOfSubStrings(String input){
-        return null;
+        int counter = -1;
+        for (int i = 0; i < input.length(); i++){
+            for (int j = i + 1; j < input.length() + 1; j++){
+                counter++;
+            }
+        }
+        return counter;
     }
 }
